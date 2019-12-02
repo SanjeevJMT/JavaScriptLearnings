@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div class="container1" id="container1">
+
+		<div class="topnav">
+			<b>Customer List</b>
+			<button type="submit"   id="addbtn"  onclick="openModal()">Add New</button>
+			<center>
+				<span id="warningmsg"></span>
+			</center>
+			<div class="search-container">
+				<input type="text" placeholder="Search by Name" name="search"
+					id="search" onkeyup="mySearch()">
+			</div>
+
+		</div>
+		<div class="customerlist" id="customerlist">
+			<ul type="none" id="viewlist">
+
+			</ul>
+
+		</div>
+		<div class="customerdetail" id="customerdetail"></div>
+
+	</div>
+
+	<div class="vl"></div>
+
+	<div class="addCustomerModal" id="addCustomerModal">
+		<h3>Add Customer</h3>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeModal()">close</a>
+		<hr>
+		<form role="form" onsubmit="return validateForm(event)"
+			id="addCustomer">
+			Name : <input type="text" name="name" id="name"><br> <br>
+			Email : <input type="text" name="email" id="email"><br>
+			<br>
+			<div id="errormsg"></div>
+			<center>
+				<input type="submit" value="Add">
+			</center>
+		</form>
+		<div id="dragArea" class="dragArea" ondragover="return false">
+			<u>Drag and drop your photo here</u>
+		</div>
+	</div>
+
+
+	<script src="script/script.js"></script>
+
+</body>
+</html>
